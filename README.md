@@ -1,1 +1,1 @@
-You should spend your time in more effective thing, if you have such time to read me.
+You should spend your time in more effective activities, if you have such time to read me.
