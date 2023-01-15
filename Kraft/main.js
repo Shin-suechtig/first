@@ -51,7 +51,7 @@ function removeQuiz(){
     replay.style.display = "block";
 }
 function quiz(){
-    if (cnt == 10){
+    if (cnt == 20){
         removeQuiz();
         cnt = 0;
         wrongsLen = wrongs.length;
@@ -113,7 +113,7 @@ let [curWordIdx, curCorrIdx] = quiz();
 let isClicked = [false, false, false, false];
 ans[0].addEventListener("click", ()=>{
     if (curCorrIdx == 0){
-        if (cnt==10){
+        if (cnt == 20){
             corrSound2.play();
         }else{
             corrSound.currentTime = 0;
@@ -135,7 +135,7 @@ ans[0].addEventListener("click", ()=>{
 })
 ans[1].addEventListener("click", ()=>{
     if (curCorrIdx == 1){
-        if (cnt==10){
+        if (cnt == 20){
             corrSound2.play();
         }else{
             corrSound.currentTime = 0;
@@ -157,7 +157,7 @@ ans[1].addEventListener("click", ()=>{
 })
 ans[2].addEventListener("click", ()=>{
     if (curCorrIdx == 2){
-        if (cnt==10){
+        if (cnt == 20){
             corrSound2.play();
         }else{
             corrSound.currentTime = 0;
@@ -179,7 +179,7 @@ ans[2].addEventListener("click", ()=>{
 })
 ans[3].addEventListener("click", ()=>{
     if (curCorrIdx == 3){
-        if (cnt==10){
+        if (cnt == 20){
             corrSound2.play();
         }else{
             corrSound.currentTime = 0;

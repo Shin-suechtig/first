@@ -1,7 +1,65 @@
 function whole(){
     return [
     [],
-    [],
+    [
+        [
+            {"word":"Handlung", "meaning":"行為", "gender":"f"},
+            {"word":"Schritt", "meaning":"歩み", "gender":"m"},
+            {"word":"Sturz", "meaning":"転倒", "gender":"m"}
+        ],
+        [
+            {"word":"Absicht", "meaning":"意図, 故意", "gender":"f"},
+            {"word":"Fehler", "meaning":"間違い", "gender":"m"},
+            {"word":"Folge", "meaning":"結果", "gender":"f"},
+            {"word":"Gedächtnis", "meaning":"記憶", "gender":"n"},
+            {"word":"Gedanke", "meaning":"考え", "gender":"m"},
+            {"word":"Geist", "meaning":"精神", "gender":"m"},
+            {"word":"Grund", "meaning":"理由", "gender":"m"},
+            {"word":"Kenntnis", "meaning":"知識", "gender":"f"},
+            {"word":"Lösung", "meaning":"解決", "gender":"f"},
+            {"word":"Plan", "meaning":"計画", "gender":"m"},
+            {"word":"Ursache", "meaning":"原因", "gender":"f"},
+            {"word":"Verabredung", "meaning":"会う約束", "gender":"f"},
+            {"word":"Vernunft", "meaning":"理性", "gender":"f"},
+            {"word":"Vorsicht", "meaning":"用心", "gender":"f"},
+            {"word":"Wille", "meaning":"意志", "gender":"m"},
+            {"word":"Zweck", "meaning":"目的", "gender":"m"}
+        ],
+        [
+            {"word":"Ärger", "meaning":"怒り", "gender":"m"},
+            {"word":"Blick", "meaning":"まなざし", "gender":"m"},
+            {"word":"Elend", "meaning":"悲惨, 困窮", "gender":"n"},
+            {"word":"Freude", "meaning":"喜び", "gender":"f"},
+            {"word":"Freundschaft", "meaning":"友情", "gender":"f"},
+            {"word":"Geruch", "meaning":"匂い", "gender":"m"},
+            {"word":"Geschmack", "meaning":"味", "gender":"m"},
+            {"word":"Hass", "meaning":"憎悪", "gender":"m"},
+            {"word":"Hoffnung", "meaning":"希望", "gender":"f"},
+            {"word":"Liebe", "meaning":"愛", "gender":"f"},
+            {"word":"Lust", "meaning":"欲望", "gender":"f"},
+            {"word":"Schreck", "meaning":"驚き", "gender":"m"},
+            {"word":"Sorge", "meaning":"心配", "gender":"f"},
+            {"word":"Träne", "meaning":"涙", "gender":"f"},
+            {"word":"Unglück", "meaning":"不運", "gender":"n"},
+            {"word":"Wut", "meaning":"激怒", "gender":"f"}
+        ],
+        [
+            {"word":"Art", "meaning":"種類", "gender":"f"},
+            {"word":"Bedingung", "meaning":"条件", "gender":"f"},
+            {"word":"Beziehung", "meaning":"関係", "gender":"f"},
+            {"word":"Ereignis", "meaning":"出来事", "gender":"n"},
+            {"word":"Ergebnis", "meaning":"結果", "gender":"n"},
+            {"word":"Existenz", "meaning":"存在", "gender":"f"},
+            {"word":"Gegenteil", "meaning":"反対", "gender":"n"},
+            {"word":"Stimmung", "meaning":"雰囲気", "gender":"f"},
+            {"word":"Unterschied", "meaning":"違い", "gender":"m"},
+            {"word":"Wechsel", "meaning":"交替", "gender":"m"},
+            {"word":"Weise", "meaning":"方法", "gender":"f"},
+            {"word":"Wirkung", "meaning":"効果", "gender":"f"},
+            {"word":"Zufall", "meaning":"偶然", "gender":"m"}
+
+        ]
+    ],
     [
         [],
         [
@@ -41,7 +99,7 @@ function whole(){
             {"word":"Kunde", "meaning":"顧客", "gender":"m"},
             {"word":"Preis", "meaning":"値段", "gender":"m"},
             {"word":"Rechnung", "meaning":"勘定(書)", "gender":"f"},
-            {"word":"Tätigkeit", "meaning":"活動", "gender":"f"}, // also means '作業'
+            {"word":"Tätigkeit", "meaning":"活動, 作業", "gender":"f"},
             {"word":"Ware", "meaning":"品物", "gender":"f"},
             {"word":"Wäscherei", "meaning":"クリーニング", "gender":"f"}
         ],
@@ -114,7 +172,7 @@ function whole(){
             {"word":"Hose", "meaning":"ズボン", "gender":"f"},
             {"word":"Jacke", "meaning":"ジャケット", "gender":"f"},
             {"word":"Jeans", "meaning":"ジーンズ", "gender":"f"},
-            {"word":"Kleid", "meaning":"ドレス", "gender":"n"}, // also means 'ワンピース'
+            {"word":"Kleid", "meaning":"ドレス, ワンピース", "gender":"n"},
             {"word":"Krawatte", "meaning":"ネクタイ", "gender":"f"},
             {"word":"Mantel", "meaning":"コート", "gender":"m"},
             {"word":"Pullover", "meaning":"セーター", "gender":"m"},
@@ -255,12 +313,67 @@ function whole(){
         ],
         [
             {"word":"Geld", "meaning":"お金", "gender":"n"},
-            {"word":"Körper", "meaning":"体", "gender":"m"}, // also means '物体'
-            {"word":"Sinn", "meaning":"感覚", "gender":"m"}, // also means '意味'
+            {"word":"Körper", "meaning":"体, 物体", "gender":"m"},
+            {"word":"Sinn", "meaning":"感覚, 意味", "gender":"m"},
             {"word":"Gefühl", "meaning":"感情", "gender":"n"}
         ]
     ],
-    [],
+    [
+        [
+            {"word":"Buchstabe", "meaning":"文字", "gender":"m"},
+            {"word":"Heft", "meaning":"ノート", "gender":"n"},
+            {"word":"Hefter", "meaning":"ホッチキス", "gender":"m"},
+            {"word":"Klebstoff", "meaning":"のり", "gender":"m"},
+            {"word":"Klebstreifen", "meaning":"セロハンテープ", "gender":"m"},
+            {"word":"Kugelschreiber", "meaning":"ボールペン", "gender":"m"},
+            {"word":"Lineal", "meaning":"定規", "gender":"n"},
+            {"word":"Podium", "meaning":"教壇", "gender":"n"},
+            {"word":"Radiergummi", "meaning":"消しゴム", "gender":"m"},
+            {"word":"Tafel", "meaning":"黒板", "gender":"f"},
+            {"word":"Tasche", "meaning":"鞄", "gender":"f"},
+            {"word":"Text", "meaning":"テキスト", "gender":"m"},
+            {"word":"Wörterbuch", "meaning":"辞典", "gender":"n"},
+            {"word":"Abhandlung", "meaning":"論文", "gender":"f"},
+            {"word":"Aufnahmeprüfung", "meaning":"入学試験", "gender":"f"},
+            {"word":"Ausbildung", "meaning":"職業教育", "gender":"f"},
+            {"word":"Bibliothek", "meaning":"図書館", "gender":"f"},
+            {"word":"Bildung", "meaning":"教養", "gender":"f"},
+            {"word":"Buch", "meaning":"本", "gender":"n"},
+            {"word":"Fach", "meaning":"学科, 専門", "gender":"n"},
+            {"word":"Ferien", "meaning":"休み", "gender":"p"},
+            {"word":"Forschung", "meaning":"研究", "gender":"f"},
+            {"word":"Frage", "meaning":"問題", "gender":"f"},
+            {"word":"Grundschule", "meaning":"小学校", "gender":"f"},
+            {"word":"Gymnasium", "meaning":"ギムナジウム", "gender":"n"},
+            {"word":"Hauptschule", "meaning":"基幹学校", "gender":"f"},
+            {"word":"Hausaufgabe", "meaning":"宿題", "gender":"f"},
+            {"word":"Kindergarten", "meaning":"幼稚園", "gender":"m"},
+            {"word":"Klasse", "meaning":"学年, クラス", "gender":"f"},
+            {"word":"Klassenzimmer", "meaning":"教室", "gender":"n"},
+            {"word":"Kommilitone", "meaning":"学友", "gender":"m"},
+            {"word":"Lehrer", "meaning":"教師", "gender":"m"},
+            {"word":"Note", "meaning":"成績", "gender":"f"},
+            {"word":"Prüfung", "meaning":"試験", "gender":"f"},
+            {"word":"Regel", "meaning":"規則", "gender":"f"},
+            {"word":"Schule", "meaning":"学校", "gender":"f"},
+            {"word":"Schulfest", "meaning":"文化祭", "gender":"n"},
+            {"word":"Seite", "meaning":"ページ", "gender":"f"},
+            {"word":"Sporthalle", "meaning":"体育館", "gender":"f"},
+            {"word":"Sportplatz", "meaning":"グラウンド", "gender":"m"},
+            {"word":"Student", "meaning":"学生", "gender":"m"},
+            {"word":"Studium", "meaning":"学業", "gender":"n"},
+            {"word":"Studenplan", "meaning":"時間割", "gender":"m"},
+            {"word":"Thema", "meaning":"テーマ", "gender":"n"},
+            {"word":"Universität", "meaning":"大学", "gender":"f"},
+            {"word":"Unterricht", "meaning":"授業", "gender":"m"},
+            {"word":"Verspätung", "meaning":"遅刻", "gender":"f"}
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
     [],
     []
 ];}
