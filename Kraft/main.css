@@ -3,6 +3,13 @@ body{
     vertical-align: middle;
     font-weight: bold;
 }
+#scoreA{
+    position: absolute;
+    right: 0px;
+    width: fit-content;
+    text-align: center;
+    font-size: 45px;
+}
 #display{
     width: 100%;
     height: 100vh;
@@ -14,58 +21,82 @@ body{
     font-size: 8vh;
     color: black;
 }
-#ans0{
+#ans_0{
     width: 50%;
     height: 40%;
     background-color: #d14d28;
 }
-#ans0:hover{
+#ans_0:hover{
     opacity: 0.6;
     cursor: pointer;
 }
-#ans1{
+#ans_1{
     width: 50%;
     background-color: #59c8ef;
 }
-#ans1:hover{
+#ans_1:hover{
     opacity: 0.6;
     cursor: pointer;
 }
-#ans2{
+#ans_2{
     height: 40%;
     background-color: #2b9464;
 }
-#ans2:hover{
+#ans_2:hover{
     opacity: 0.6;
     cursor: pointer;
 }
-#ans3{
+#ans_3{
     background-color: #f5df65;
 }
-#ans3:hover{
+#ans_3:hover{
     opacity: 0.6;
     cursor: pointer;
 }
 #result{
-    max-width: 55vw;
+    width: fit-content;
+    min-width: 26vw;
     padding: 0.5em 1em;
-    margin: 40px auto;
-    background: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,.4);;
+    margin: 0 auto;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,.4);
+}
+#scoreB{
+    padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+}
+#perfect{
+    display: block;
+    width: 100%;
+    text-align: "center";
+    font-size: 14vw;
+    background-color: black;
+    color: white;
 }
 #replay{
+    display: block;
     width: 24vw;
-    font-size: 4vw;
     padding: auto;
-    margin: 0 auto;
+    margin: 10px auto;
     border-radius: 1rem;
     background-color: red;
     color: white;
+    font-size: 4vw;
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 3px 5px rgba(0,0,0,.3);
 }
-
 #replay:hover{
     background-color: orange;
+}
+
+@keyframes gaming {
+    0% { background-color: Magenta; }
+    33% { background-color: yellow; }
+    66% { background-color: Cyan; }
+    100% { background-color: Magenta; }
 }

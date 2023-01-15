@@ -8,22 +8,40 @@
     <title>Kraft: Das beste Lehrbuch für Vokabeln</title>
 </head>
 <body>
+    <div id="scoreA">
+        <img src="circle.svg" width="50px" height="50px" alt="○" >
+        <span id="corrCntA"></span>
+        <img src="cross.svg" width="50px" height="50px" alt="×">
+        <span id="wrongCntA"></span>
+    </div>
     <table id="display">
         <tr>
             <td id="question" colspan="2"></td>
         </tr>
         <tr>
-            <td id="ans0"></td>
-            <td id="ans1"></td>
+            <td id="ans_0"></td>
+            <td id="ans_1"></td>
         </tr>
         <tr>
-            <td id="ans2"></td>
-            <td id="ans3"></td>
+            <td id="ans_2"></td>
+            <td id="ans_3"></td>
         </tr>
     </table>
-    <div id="result"></div>
+    <div id="result">
+        <div id="scoreB">
+            <img src="circle.svg" width="20px" height="20px" alt="○" >
+            <span id="corrCntB"></span>
+            <img src="cross.svg" width="20px" height="20px" alt="×">
+            <span id="wrongCntB"></span>
+        </div>
+        <div id="perfect">Perfect!</div>
+        <div id="imperfect"></div>
+    </div>
     <div id="replay">Replay</div>
 </body>
+<audio src="correct.mp3" id="corrSound"></audio>
+<audio src="correct2.mp3" id="corrSound2"></audio>
+<audio src="wrong.mp3" id="wrongSound"></audio>
 <script src="words.js"></script>
 <script src="main.js"></script>
 </html>
