@@ -1,12 +1,5 @@
-const WHOLE = whole();
-let target = [];
-for (const i of WHOLE){
-    for (const j of i){
-        for (const k of j){
-            target.push({"word":k["word"], "meaning":k["meaning"], "gender":k["gender"]})
-        }
-    }
-}
+let target = words("noun");
+
 let body = document.getElementsByTagName("body")[0];
 let targetLen = target.length;
 console.log(targetLen);
@@ -207,7 +200,7 @@ replay.addEventListener("click", ()=>{
         wrongs = [];
         isClicked = [false, false, false, false];
         corrCntElemA.innerText = 0;
-        wrongCntElemB.innerText= 0;
+        wrongCntElemA.innerText= 0;
         body.style.animation = "";
         result.style.animation = "";
     }
