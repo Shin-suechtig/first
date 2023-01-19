@@ -16,6 +16,7 @@ let wrongCntElemB = document.getElementById("wrongCntB");
 let perfect = document.getElementById("perfect");
 let imperfect = document.getElementById("imperfect");
 let replay = document.getElementById("replay");
+let startSound = document.getElementById("startSound");
 let corrSound = document.getElementById("corrSound");
 let corrSound2 = document.getElementById("corrSound2");
 let wrongSound = document.getElementById("wrongSound");
@@ -98,8 +99,9 @@ function quiz(){
         return [wordIdx, corrIdx]
     }
 }
-
 setQuiz();
+startSound.play();
+startSound.currentTime = 0;
 corrCntElemA.innerText = 0;
 wrongCntElemA.innerText = 0;
 let [curWordIdx, curCorrIdx] = quiz();
@@ -195,6 +197,8 @@ ans[3].addEventListener("click", ()=>{
 replay.addEventListener("click", ()=>{
     if (cnt==0){
         [curWordIdx, curCorrIdx] = quiz();
+        startSound.currentTime = 0;
+        startSound.play();
         corrCnt = 0;
         wrongCnt = 0;
         wrongs = [];
