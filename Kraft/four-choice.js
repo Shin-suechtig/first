@@ -26,6 +26,8 @@ let wrongSound = document.getElementById("wrongSound");
 
 let wordIdx;
 let tmpWordIdx;
+let wordTxt;
+let targetDict;
 let corrIdx;
 let wrongIdx = [];
 let tmpWrongIdx;
@@ -115,9 +117,12 @@ function quiz(){
             ans[i].innerText = randElem(target[tmpWrongIdx]["meaning"]);
         }
         wrongIdx = [];
-        word.innerText = target[wordIdx]["word"];
-        pronunc.innerText = "[" + target[wordIdx]["pronunc"] + "]";
-        ans[corrIdx].innerText = randElem(target[wordIdx]["meaning"]);
+        targetDict = target[wordIdx]
+        wordTxt = targetDict["word"];
+        if (targetDict["gender_is_distinctive"]) wordTxt += " (" + targetDict["gender"] + ")";
+        word.innerText = wordTxt;
+        pronunc.innerText = "[" + targetDict["pronunc"] + "]";
+        ans[corrIdx].innerText = randElem(targetDict["meaning"]);
         cnt++;
         return [wordIdx, corrIdx]
     }
