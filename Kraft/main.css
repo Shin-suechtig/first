@@ -3,6 +3,26 @@ body{
     vertical-align: middle;
     font-weight: bold;
 }
+#clsChg{
+    position: absolute;
+    display: block;
+    width: 16vh;
+    height: 8vh;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: darkgreen;
+    color: white;
+    font-size: 3vw;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+}
+#clsChg:hover{
+    background-color: green;
+}
+#hamburger{
+    background-color: green;
+}
 #scoreA{
     position: absolute;
     right: 0px;
@@ -18,8 +38,14 @@ body{
 }
 #question{
     height: 20%;
+}
+#word{
     font-size: 8vh;
     color: black;
+}
+#pronunc{
+    font-size: 3vh;
+    color: gray;
 }
 #ans_0{
     width: 50%;
@@ -94,7 +120,7 @@ body{
     background-color: orange;
 }
 
-@keyframes gaming {
+@keyframes gaming{
     0% { background-color: Magenta; }
     33% { background-color: yellow; }
     66% { background-color: Cyan; }

@@ -1,10 +1,13 @@
-let target = words("noun");
-
-let body = document.getElementsByTagName("body")[0];
+let wordClass = "noun";
+let target = words(wordClass);
 let targetLen = target.length;
 console.log(targetLen);
+
+let body = document.getElementsByTagName("body")[0];
+let clsChg = document.getElementById("clsChg");
 let display = document.getElementById("display");
-let question = document.getElementById("question");
+let word = document.getElementById("word");
+let pronunc = document.getElementById("pronunc");
 let ans = [document.getElementById("ans_0"), document.getElementById("ans_1"), document.getElementById("ans_2"), document.getElementById("ans_3")]
 let result = document.getElementById("result");
 let scoreElemA = document.getElementById("scoreA");
@@ -32,7 +35,13 @@ let wrongCnt = 0;
 let wrongs = [];
 let wrongsLen;
 let mistakenWordIdx;
+let mistakenWordMeaning;
+let mistakenWordMeaningLen;
+let mistakenWordMeaningTxt;
 let wrongsTxt;
+function randElem(arr){
+    return arr[Math.floor(Math.random() * arr.length)];
+}
 function setQuiz(){
     scoreElemA.style.display = "block";
     display.style.display = "table";
@@ -68,8 +77,21 @@ function quiz(){
             wrongsTxt = "";
             for (let i=0; i<wrongsLen; ++i){
                 mistakenWordIdx = wrongs[i][0];
-                wrongsTxt += "<span style=\"color: red;\">'" + target[mistakenWordIdx]["word"] + "'</span>" + " is '<span style=\"color: red;\">"
-                    + target[mistakenWordIdx]["meaning"] + "'</span>, not '" + wrongs[i][1] + "'.<br>"
+                mistakenWordMeaning = target[mistakenWordIdx]["meaning"];
+                mistakenWordMeaningLen = mistakenWordMeaning.length;
+                mistakenWordMeaningTxt = "'" + mistakenWordMeaning[0] + "'";
+                if (mistakenWordMeaningLen != 0){
+                    for (let i=1; i<mistakenWordMeaningLen; ++i){
+                        if (i == mistakenWordMeaningLen - 1){
+                            mistakenWordMeaningTxt += "</span> or <span style=\"color: red;\">'" + mistakenWordMeaning[i] + "'";
+                        }else{
+                            mistakenWordMeaningTxt += "</span>, <span style=\"color: red;\">'" + mistakenWordMeaning[i] + "'";
+                        }
+                    }
+                }
+                wrongsTxt += "<span style=\"color: red;\">'" + target[mistakenWordIdx]["word"] + "'</span>"
+                + " is <span style=\"color: red;\">"
+                + mistakenWordMeaningTxt + "</span>, not '" + wrongs[i][1] + "'.<br>"
             }
             imperfect.innerHTML = wrongsTxt.slice(0,-4);
             return [null, null];
@@ -90,14 +112,28 @@ function quiz(){
                 tmpWrongIdx = Math.floor(Math.random() * targetLen);
             }
             wrongIdx.push(tmpWrongIdx);
-            ans[i].innerText = target[tmpWrongIdx]["meaning"];
+            ans[i].innerText = randElem(target[tmpWrongIdx]["meaning"]);
         }
         wrongIdx = [];
-        question.innerText = target[wordIdx]["word"];
-        ans[corrIdx].innerText = target[wordIdx]["meaning"];
+        word.innerText = target[wordIdx]["word"];
+        pronunc.innerText = "[" + target[wordIdx]["pronunc"] + "]";
+        ans[corrIdx].innerText = randElem(target[wordIdx]["meaning"]);
         cnt++;
         return [wordIdx, corrIdx]
     }
+}
+function restart(){
+    [curWordIdx, curCorrIdx] = quiz();
+    startSound.currentTime = 0;
+    startSound.play();
+    corrCnt = 0;
+    wrongCnt = 0;
+    wrongs = [];
+    isClicked = [false, false, false, false];
+    corrCntElemA.innerText = 0;
+    wrongCntElemA.innerText = 0;
+    body.style.animation = "";
+    result.style.animation = "";
 }
 setQuiz();
 startSound.play();
@@ -194,18 +230,17 @@ ans[3].addEventListener("click", ()=>{
         wrongs.push([curWordIdx, ans[3].textContent]);
     }
 })
-replay.addEventListener("click", ()=>{
-    if (cnt==0){
-        [curWordIdx, curCorrIdx] = quiz();
-        startSound.currentTime = 0;
-        startSound.play();
-        corrCnt = 0;
-        wrongCnt = 0;
-        wrongs = [];
-        isClicked = [false, false, false, false];
-        corrCntElemA.innerText = 0;
-        wrongCntElemA.innerText= 0;
-        body.style.animation = "";
-        result.style.animation = "";
+replay.addEventListener("click", restart)
+clsChg.addEventListener("click", ()=>{
+    if (wordClass == "noun"){
+        wordClass = "verb";
+        clsChg.innerText = "V";
+    }else{
+        wordClass = "noun";
+        clsChg.innerText = "N";
     }
+    target = words(wordClass);
+    targetLen = target.length;
+    cnt = 0;
+    restart();
 })
