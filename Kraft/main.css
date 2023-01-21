@@ -44,7 +44,8 @@ body{
     color: black;
 }
 #pronunc{
-    font-size: 3vh;
+    font-size: 4vh;
+    font-family: "Times New Roman", "Arial", "Courier New", "Segoe UI";
     color: gray;
 }
 #ans_0{
