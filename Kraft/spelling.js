@@ -62,6 +62,7 @@ function removeQuiz(){
 }
 function quiz(){
     tmpWrongCnt = 0;
+    pstAnsValue = "";
     if (cnt == 20){
         removeQuiz();
         cnt = 1;
