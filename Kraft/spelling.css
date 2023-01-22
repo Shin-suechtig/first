@@ -66,20 +66,21 @@ body{
     font-size: 16vw;
     overflow-wrap: break-word;
 }
-#replay{
+#replay, .playAnother{
     display: none;
-    width: 24vw;
+    width: 28vw;
     padding: auto;
-    margin: auto;
+    margin: 4px auto;
     border-radius: 1rem;
     background-color: red;
-    color: white;
+    color: white !important;
     font-size: 4vw;
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 3px 5px rgba(0,0,0,.3);
 }
-#replay:hover{
+#replay:hover, .playAnother:hover{
+    text-decoration: none;
     background-color: orange;
 }
 #wrongsBox{

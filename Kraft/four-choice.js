@@ -19,6 +19,7 @@ let wrongCntElemB = document.getElementById("wrongCntB");
 let perfect = document.getElementById("perfect");
 let imperfect = document.getElementById("imperfect");
 let replay = document.getElementById("replay");
+let playAnother = document.getElementsByClassName("playAnother")[0];
 let footer = document.getElementsByTagName("footer")[0];
 let startSound = document.getElementById("startSound");
 let corrSound = document.getElementById("corrSound");
@@ -53,13 +54,14 @@ function setQuiz(){
     display.style.display = "table";
     result.style.display = "none";
     replay.style.display = "none";
+    playAnother.style.display = "none";
     footer.style.display = "inline";
-    
 }
 function removeQuiz(){
     display.style.display = "none";
     result.style.display = "block";
     replay.style.display = "block";
+    playAnother.style.display = "block";
     footer.style.display = "none";
 }
 function quiz(){

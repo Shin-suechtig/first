@@ -105,20 +105,21 @@ body{
     background-color: black;
     color: white;
 }
-#replay{
+#replay, .playAnother{
+    position: relative;
     display: block;
     width: 24vw;
     padding: auto;
     margin: 10px auto;
     border-radius: 1rem;
     background-color: red;
-    color: white;
+    color: white !important;
     font-size: 4vw;
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 3px 5px rgba(0,0,0,.3);
 }
-#replay:hover{
+#replay:hover, .playAnother:hover{
     background-color: orange;
 }
 footer{
@@ -129,7 +130,7 @@ a{
     color: blue;
     text-decoration: none;
 }
-a:hover{
+footer a:hover{
     text-decoration: underline;
 }
 

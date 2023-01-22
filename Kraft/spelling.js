@@ -13,7 +13,10 @@ let result = document.getElementById("result");
 let scoreElem = document.getElementById("score");
 let wrongsElem = document.getElementById("wrongs");
 let replay = document.getElementById("replay");
+let playAnother = document.getElementsByClassName("playAnother")[0];
+let caution = document.getElementById("caution");
 let cntElem = document.getElementById("count");
+let footer = document.getElementsByTagName("footer")[0];
 let startSound = document.getElementById("startSound");
 let corrSound = document.getElementById("corrSound");
 let corrSound2 = document.getElementById("corrSound2");
@@ -42,14 +45,20 @@ function setQuiz(){
     scoreElem.style.paddingTop = "";
     wrongsElem.style.display = "none";
     replay.style.display = "none";
+    playAnother.style.display = "none";
+    caution.style.display = "block";
     cntElem.style.display = "block";
+    footer.style.display = "block";
 }
 function removeQuiz(){
     display.style.display = "none";
     scoreElem.style.paddingTop = "7vh";
     wrongsElem.style.display = "block";
     replay.style.display = "block";
+    playAnother.style.display = "block";
+    caution.style.display = "none";
     cntElem.style.display = "none";
+    footer.style.display = "none";
 }
 function quiz(){
     tmpWrongCnt = 0;
