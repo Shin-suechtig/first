@@ -19,15 +19,19 @@ let wrongCntElemB = document.getElementById("wrongCntB");
 let perfect = document.getElementById("perfect");
 let imperfect = document.getElementById("imperfect");
 let replay = document.getElementById("replay");
+let footer = document.getElementsByTagName("footer")[0];
 let startSound = document.getElementById("startSound");
 let corrSound = document.getElementById("corrSound");
 let corrSound2 = document.getElementById("corrSound2");
 let wrongSound = document.getElementById("wrongSound");
 
+let curWordIdx;
+let curCorrIdx;
+let isClicked = [false, false, false, false];
 let wordIdx;
 let tmpWordIdx;
 let wordTxt;
-let targetDict;
+let corrDict;
 let corrIdx;
 let wrongIdx = [];
 let tmpWrongIdx;
@@ -49,11 +53,14 @@ function setQuiz(){
     display.style.display = "table";
     result.style.display = "none";
     replay.style.display = "none";
+    footer.style.display = "inline";
+    
 }
 function removeQuiz(){
     display.style.display = "none";
     result.style.display = "block";
     replay.style.display = "block";
+    footer.style.display = "none";
 }
 function quiz(){
     if (cnt == 20){
@@ -117,17 +124,17 @@ function quiz(){
             ans[i].innerText = randElem(target[tmpWrongIdx]["meaning"]);
         }
         wrongIdx = [];
-        targetDict = target[wordIdx]
-        wordTxt = targetDict["word"];
-        if (targetDict["gender_is_distinctive"]) wordTxt += " (" + targetDict["gender"] + ")";
+        corrDict = target[wordIdx]
+        wordTxt = corrDict["word"];
+        if (corrDict["gender_is_distinctive"]) wordTxt += " (" + corrDict["gender"] + ")";
         word.innerText = wordTxt;
-        pronunc.innerText = "[" + targetDict["pronunc"] + "]";
-        ans[corrIdx].innerText = randElem(targetDict["meaning"]);
+        pronunc.innerText = "[" + corrDict["pronunc"] + "]";
+        ans[corrIdx].innerText = randElem(corrDict["meaning"]);
         cnt++;
         return [wordIdx, corrIdx]
     }
 }
-function restart(){
+function start(){
     [curWordIdx, curCorrIdx] = quiz();
     startSound.currentTime = 0;
     startSound.play();
@@ -140,13 +147,7 @@ function restart(){
     body.style.animation = "";
     result.style.animation = "";
 }
-setQuiz();
-startSound.play();
-startSound.currentTime = 0;
-corrCntElemA.innerText = 0;
-wrongCntElemA.innerText = 0;
-let [curWordIdx, curCorrIdx] = quiz();
-let isClicked = [false, false, false, false];
+start();
 ans[0].addEventListener("click", ()=>{
     if (curCorrIdx == 0){
         if (cnt == 20){
@@ -235,7 +236,7 @@ ans[3].addEventListener("click", ()=>{
         wrongs.push([curWordIdx, ans[3].textContent]);
     }
 })
-replay.addEventListener("click", restart)
+replay.addEventListener("click", start)
 clsChg.addEventListener("click", ()=>{
     if (wordClass == "noun"){
         wordClass = "verb";
@@ -247,5 +248,5 @@ clsChg.addEventListener("click", ()=>{
     target = words(wordClass);
     targetLen = target.length;
     cnt = 0;
-    restart();
+    start();
 })

@@ -12,8 +12,9 @@ body{
     border-radius: 2rem;
     background-color: darkgreen;
     color: white;
-    font-size: 3vw;
+    font-size: 6vh;
     cursor: pointer;
+    user-select: none;
     transition: all 0.3s;
     box-shadow: 0 3px 5px rgba(0,0,0,.3);
 }
@@ -120,10 +121,21 @@ body{
 #replay:hover{
     background-color: orange;
 }
+footer{
+    font-size: 4vh;
+    float: right;
+}
+a{
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
 
 @keyframes gaming{
-    0% { background-color: Magenta; }
+    0% { background-color: magenta; }
     33% { background-color: yellow; }
     66% { background-color: Cyan; }
-    100% { background-color: Magenta; }
+    100% { background-color: magenta; }
 }
