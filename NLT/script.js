@@ -26,6 +26,8 @@ function t9e(){
         text=>{
             if (m3s.includes(text)){
                 return text;
+            }else if (text == "WikiWiki"){
+                return "W2iW2i";
             }else{
                 console.log(text.length);
                 return text.slice(0,1)+(text.length-2)+text.slice(-1);

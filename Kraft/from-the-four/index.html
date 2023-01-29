@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="four-choice.css">
+    <link rel="stylesheet" href="style.css">
     <title>Kraft: Power Yourself</title>
 </head>
 <body>
     <div id="clsChg">N</div>
     <div id="hamburger"><span></span><span></span><span></span></div>
     <div id="scoreA">
-        <img src="circle.svg" width="50px" height="50px" alt="○" >
+        <img src="..\src\circle.svg" width="50px" height="50px" alt="○" >
         <span id="corrCntA"></span>
-        <img src="cross.svg" width="50px" height="50px" alt="×">
+        <img src="..\src\cross.svg" width="50px" height="50px" alt="×">
         <span id="wrongCntA"></span>
     </div>
     <table id="display">
@@ -34,22 +34,22 @@
     </table>
     <div id="result">
         <div id="scoreB">
-            <img src="circle.svg" width="20px" height="20px" alt="○" >
+            <img src="..\src\circle.svg" width="20px" height="20px" alt="○" >
             <span id="corrCntB"></span>
-            <img src="cross.svg" width="20px" height="20px" alt="×">
+            <img src="..\src\cross.svg" width="20px" height="20px" alt="×">
             <span id="wrongCntB"></span>
         </div>
         <div id="perfect">Perfect!</div>
         <div id="imperfect"></div>
     </div>
     <div id="replay">Replay</div>
-    <a href="/webs/Kraft/spelling.html" class="playAnother">Go Spell It</a>
+    <a href="..\spell-it" class="playAnother">Go Spell It</a>
 </body>
-<footer>→Play <a href="/webs/Kraft/spelling.html">Kraft of Spelling</a></footer>
-<audio src="startQuiz.mp3" id="startSound"></audio>
-<audio src="correct.mp3" id="corrSound"></audio>
-<audio src="correct2.mp3" id="corrSound2"></audio>
-<audio src="wrong.mp3" id="wrongSound"></audio>
-<script src="words.js"></script>
-<script src="four-choice.js"></script>
+<footer>→Play <a href="..\spell-it">Kraft of Spelling</a></footer>
+<audio src="..\src\startQuiz.mp3" id="startSound"></audio>
+<audio src="..\src\correct.mp3" id="corrSound"></audio>
+<audio src="..\src\correct2.mp3" id="corrSound2"></audio>
+<audio src="..\src\wrong.mp3" id="wrongSound"></audio>
+<script src="..\src\words.js"></script>
+<script src="script.js"></script>
 </html>

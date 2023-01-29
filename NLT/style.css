@@ -13,7 +13,9 @@ textarea {
     border-radius: 5px;
     border: 1px solid #000;
 }
-.areas {
-    margin-top: 1em;
-    margin-bottom: 1em;
+#t8r {
+    display: flex;
+}
+.t7s {
+    margin: auto;
 }
