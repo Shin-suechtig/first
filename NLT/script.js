@@ -29,7 +29,6 @@ function t9e(){
             }else if (text == "WikiWiki"){
                 return "W2iW2i";
             }else{
-                console.log(text.length);
                 return text.slice(0,1)+(text.length-2)+text.slice(-1);
             }
         }

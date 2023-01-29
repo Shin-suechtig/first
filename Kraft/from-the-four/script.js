@@ -249,6 +249,7 @@ clsChg.addEventListener("click", ()=>{
     }
     target = words(wordClass);
     targetLen = target.length;
+    console.log(targetLen);
     cnt = 0;
     start();
 })

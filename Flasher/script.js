@@ -2,8 +2,9 @@ const ARTICLES = ["10月の真実", "2x2=4", "42", "ABB型ワード", "AEIOU英�
 const ARTICLESLEN = ARTICLES.length;
 let text = document.getElementById("text");
 let intv = document.getElementById("intv");
+let intvVal;
 let rndNum = Math.floor(Math.random() * ARTICLESLEN);
-let paused = false
+let paused = false;
 function show(){
     if (paused) return;
     text.innerText = ARTICLES[rndNum];
@@ -22,7 +23,7 @@ document.addEventListener('keypress', () => {
 });
 intv.addEventListener("input", () => {
     clearInterval(id);
-    let intvVal = intv.value;
+    intvVal = intv.value;
     if (intvVal == 0){
         id = setInterval(show, 1);
     }else{
