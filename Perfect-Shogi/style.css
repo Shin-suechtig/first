@@ -1,0 +1,80 @@
+html {
+    background-color: #90ee90;
+}
+
+#shogi_box {
+    display: flex;
+    justify-content: center;
+}
+
+#in_hands_box_0 {
+    display: block;
+    font-size: 5vmin;
+}
+
+#in_hands_box_1 {
+    display: block;
+    font-size: 5vmin;
+    transform: rotate(180deg);
+}
+
+#board {
+    background-color: #f9c270;
+    border: 1px solid #000000;
+    width: 83vmin;
+    height: 83vmin;
+    padding: 1vmin;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+td {
+    font-size: 5vmin;
+    text-align: center;
+    border: 1px solid #000000;
+    width: calc(100%/9);
+    height: calc(100%/9);
+}
+
+.button {
+    position: absolute;
+    bottom: -10vmin;
+    height: 10vmin;
+    font-size: 8vmin;
+    text-align: center;
+    user-select: none;
+}
+
+#reverse {
+    left: 0;
+    width: 40vmin;
+    background-color: #ff0000;
+}
+
+#reverse:hover {
+    background-color: #dd0000;
+}
+
+#light_you_up{
+    right:0;
+    width: 58vmin;
+    background-color: #00aaff;
+}
+#light_you_up:hover{
+    background-color: #0099dd;
+}
+
+.enemies {
+    transform: rotate(180deg);
+}
+
+@keyframes gaming{
+    0% { background-color: magenta; }
+    33% { background-color: yellow; }
+    66% { background-color: Cyan; }
+    100% { background-color: magenta; }
+}
