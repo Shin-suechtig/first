@@ -367,26 +367,17 @@ lightYouUpButtonElem.addEventListener("click", () => {
     boardIsGaming = !boardIsGaming;
 })
 
-function setAnimations(){
+function setAnimations() {
     html.style.animation = "gaming 2s reverse infinite";
-    boardElem.animation = "gaming 2s reverse infinite";
-    squareElemsArr.forEach((val, key) => {
-        val.forEach((val2, key2) => {
-            val2.style.animation = `gaming 4s linear ${0.05 * (key + key2 - 16)}s infinite`;
-        });
-    });
+    boardElem.style.animation = "graduation 2s linear infinite";
+    boardElem.style.background = "0 0 / 200% 200% linear-gradient(-45deg, magenta, yellow, cyan, magenta, yellow, cyan)"
 }
 
-function clearAnimations(){
+function clearAnimations() {
     html.style.backgroundColor = (boardIsOrange ? "#90ee90" : "#f9c270");
     boardElem.style.backgroundColor = (boardIsOrange ? "#f9c270" : "#90ee90");
     html.style.animation = "";
     boardElem.animation = "";
-    squareElemsArr.forEach(it => {
-        it.forEach(it2 => {
-            it2.style.animation = "";
-        });
-    });
 }
 
 class Piece {
