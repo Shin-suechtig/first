@@ -277,6 +277,7 @@ function inHandsRenewer() {
 function checkIfHeBrokeTheRules() {
     // 直前の指し手が反則ならば true を返す
     // 未実装
+    //if () { }
     return;
 }
 
@@ -375,9 +376,10 @@ function setAnimations() {
 
 function clearAnimations() {
     html.style.backgroundColor = (boardIsOrange ? "#90ee90" : "#f9c270");
+    boardElem.style.background = "";
     boardElem.style.backgroundColor = (boardIsOrange ? "#f9c270" : "#90ee90");
     html.style.animation = "";
-    boardElem.animation = "";
+    boardElem.style.animation = "";
 }
 
 class Piece {
