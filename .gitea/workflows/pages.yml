@@ -1,0 +1,8 @@
+name: Deploy Online Pages
+on: [push]
+jobs:
+  Pages-Deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pages
+        uses: http://gitea:3000/actions/pages@v1
